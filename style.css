@@ -1,0 +1,53 @@
+header {
+  display: inline-block;
+  cursor: pointer;
+}
+nav li {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+header:hover,
+nav li:hover {
+  background-color: #bfbfbf;
+}
+main li .foodName {
+  text-decoration: underline;
+}
+.active {
+  font-size: x-large;
+  color: inherit;
+}
+.hide {
+  display: none;
+}
+.darkMode {
+  background-color: #000000;
+  color: #ffffff;
+}
+.year .foodName {
+  text-decoration: none;
+}
+@media print {
+  body {
+    font-size: x-small;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav li {
+    display: none;
+  }
+  nav li.active {
+    display: inline-block;
+  }
+  nav #optionMenu li.active {
+    font-size: inherit;
+  }
+  .darkMode {
+    color: #000000;
+  }
+}
