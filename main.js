@@ -1,9 +1,8 @@
 "use strict";
 const itemList = [];
-const currentMonthNumber = new Date().getMonth() + 1;
 const select = (name) => document.querySelector(name);
 const selectAll = (name) => document.querySelectorAll(name);
-let currentMonthMenu = selectAll(`#monthMenu li`)[currentMonthNumber - 1];
+let currentMonthMenu = selectAll(`#monthMenu li`)[new Date().getMonth()];
 function jsonToArray(data) {
   for (let i = 0; i < data.length; i++) {
     itemList.push(data[i]);
