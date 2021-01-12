@@ -11,10 +11,14 @@ function jsonToArray(data) {
 }
 function makeLITag(itemList, orderType) {
   for (let i = 0; i < itemList.length; i++) {
+    let foodMonthsInnerHtml = "";
+    for (let j = 0; j < itemList[i].foodMonths.length; j++) {
+      foodMonthsInnerHtml += `<span class="m${itemList[i].foodMonths[j]}">${itemList[i].foodMonths[j]}</span>`;
+    }
     const html = `
       <li>
         <b class="foodName">${itemList[i].foodName}</b>
-        <b class="foodMonths">${itemList[i].foodMonths}</b>
+        <b class="foodMonths">${foodMonthsInnerHtml}</b>
         <i class="foodHashtags">${itemList[i].foodHashtags}</i>
       </li>
       `;

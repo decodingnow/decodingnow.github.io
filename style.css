@@ -29,6 +29,57 @@ main li .foodName {
 .year .foodName {
   text-decoration: none;
 }
+main li .foodMonths span {
+  margin: 0.1rem;
+}
+nav #monthMenu #menuMonth01.active,
+main li .foodMonths span.m01 {
+  background-color: #ff9999;
+}
+nav #monthMenu #menuMonth02.active,
+main li .foodMonths span.m02 {
+  background-color: #ffcc99;
+}
+nav #monthMenu #menuMonth03.active,
+main li .foodMonths span.m03 {
+  background-color: #ffff99;
+}
+nav #monthMenu #menuMonth04.active,
+main li .foodMonths span.m04 {
+  background-color: #ccff99;
+}
+nav #monthMenu #menuMonth05.active,
+main li .foodMonths span.m05 {
+  background-color: #99ff99;
+}
+nav #monthMenu #menuMonth06.active,
+main li .foodMonths span.m06 {
+  background-color: #99ffcc;
+}
+nav #monthMenu #menuMonth07.active,
+main li .foodMonths span.m07 {
+  background-color: #99ffff;
+}
+nav #monthMenu #menuMonth08.active,
+main li .foodMonths span.m08 {
+  background-color: #99ccff;
+}
+nav #monthMenu #menuMonth09.active,
+main li .foodMonths span.m09 {
+  background-color: #9999ff;
+}
+nav #monthMenu #menuMonth10.active,
+main li .foodMonths span.m10 {
+  background-color: #cc99ff;
+}
+nav #monthMenu #menuMonth11.active,
+main li .foodMonths span.m11 {
+  background-color: #ff99ff;
+}
+nav #monthMenu #menuMonth12.active,
+main li .foodMonths span.m12 {
+  background-color: #ff99cc;
+}
 @media print {
   body {
     font-size: x-small;
