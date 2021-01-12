@@ -89,7 +89,7 @@ function clickMenu(e) {
         break;
       case "다크 모드":
         select(`body`).classList.toggle("darkMode");
-        toggleClassOfAllListItems("li", "darkMode");
+        toggleClassOfAllListItems("main li", "darkMode");
         e.target.classList.toggle("active");
         break;
       case "인쇄":
