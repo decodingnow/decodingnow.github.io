@@ -80,6 +80,66 @@ nav #monthMenu #menuMonth12.active,
 main li .foodMonths span.m12 {
   background-color: #ff99cc;
 }
+body.darkMode nav #monthMenu #menuMonth01.active,
+body.darkMode main li .foodMonths span.m01 {
+  color: #ff9999;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth02.active,
+body.darkMode main li .foodMonths span.m02 {
+  color: #ffcc99;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth03.active,
+body.darkMode main li .foodMonths span.m03 {
+  color: #ffff99;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth04.active,
+body.darkMode main li .foodMonths span.m04 {
+  color: #ccff99;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth05.active,
+body.darkMode main li .foodMonths span.m05 {
+  color: #99ff99;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth06.active,
+body.darkMode main li .foodMonths span.m06 {
+  color: #99ffcc;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth07.active,
+body.darkMode main li .foodMonths span.m07 {
+  color: #99ffff;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth08.active,
+body.darkMode main li .foodMonths span.m08 {
+  color: #99ccff;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth09.active,
+body.darkMode main li .foodMonths span.m09 {
+  color: #9999ff;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth10.active,
+body.darkMode main li .foodMonths span.m10 {
+  color: #cc99ff;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth11.active,
+body.darkMode main li .foodMonths span.m11 {
+  color: #ff99ff;
+  background-color: transparent;
+}
+body.darkMode nav #monthMenu #menuMonth12.active,
+body.darkMode main li .foodMonths span.m12 {
+  color: #ff99cc;
+  background-color: transparent;
+}
 @media print {
   body {
     font-size: x-small;
@@ -98,7 +158,31 @@ main li .foodMonths span.m12 {
   nav #optionMenu li.active {
     font-size: inherit;
   }
-  .darkMode {
+  .darkMode,
+  body.darkMode nav #monthMenu #menuMonth01.active,
+  body.darkMode main li .foodMonths span.m01,
+  body.darkMode nav #monthMenu #menuMonth02.active,
+  body.darkMode main li .foodMonths span.m02,
+  body.darkMode nav #monthMenu #menuMonth03.active,
+  body.darkMode main li .foodMonths span.m03,
+  body.darkMode nav #monthMenu #menuMonth04.active,
+  body.darkMode main li .foodMonths span.m04,
+  body.darkMode nav #monthMenu #menuMonth05.active,
+  body.darkMode main li .foodMonths span.m05,
+  body.darkMode nav #monthMenu #menuMonth06.active,
+  body.darkMode main li .foodMonths span.m06,
+  body.darkMode nav #monthMenu #menuMonth07.active,
+  body.darkMode main li .foodMonths span.m07,
+  body.darkMode nav #monthMenu #menuMonth08.active,
+  body.darkMode main li .foodMonths span.m08,
+  body.darkMode nav #monthMenu #menuMonth09.active,
+  body.darkMode main li .foodMonths span.m09,
+  body.darkMode nav #monthMenu #menuMonth10.active,
+  body.darkMode main li .foodMonths span.m10,
+  body.darkMode nav #monthMenu #menuMonth11.active,
+  body.darkMode main li .foodMonths span.m11,
+  body.darkMode nav #monthMenu #menuMonth12.active,
+  body.darkMode main li .foodMonths span.m12 {
     color: #000000;
   }
 }
