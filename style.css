@@ -1,3 +1,20 @@
+:root {
+  --color-black: hsla(0, 0%, 0%, 1);
+  --color-gray75: hsla(0, 0%, 75%, 1);
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-h000: hsla(000, 100%, 80%, 1);
+  --color-h030: hsla(030, 100%, 80%, 1);
+  --color-h060: hsla(060, 100%, 80%, 1);
+  --color-h090: hsla(090, 100%, 80%, 1);
+  --color-h120: hsla(120, 100%, 80%, 1);
+  --color-h150: hsla(150, 100%, 80%, 1);
+  --color-h180: hsla(180, 100%, 80%, 1);
+  --color-h210: hsla(210, 100%, 80%, 1);
+  --color-h240: hsla(240, 100%, 80%, 1);
+  --color-h270: hsla(270, 100%, 80%, 1);
+  --color-h300: hsla(300, 100%, 80%, 1);
+  --color-h330: hsla(330, 100%, 80%, 1);
+}
 header {
   display: inline-block;
   cursor: pointer;
@@ -10,7 +27,7 @@ nav li {
 }
 header:hover,
 nav li:hover {
-  background-color: #bfbfbf;
+  background-color: var(--color-gray75);
 }
 main li .foodName {
   text-decoration: underline;
@@ -23,8 +40,8 @@ main li .foodName {
   display: none;
 }
 .darkMode {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 .year .foodName {
   text-decoration: none;
@@ -34,110 +51,110 @@ main li .foodMonths span {
 }
 nav #monthMenu #menuMonth01.active,
 main li .foodMonths span.m01 {
-  background-color: #ff9999;
+  background-color: var(--color-h000);
 }
 nav #monthMenu #menuMonth02.active,
 main li .foodMonths span.m02 {
-  background-color: #ffcc99;
+  background-color: var(--color-h030);
 }
 nav #monthMenu #menuMonth03.active,
 main li .foodMonths span.m03 {
-  background-color: #ffff99;
+  background-color: var(--color-h060);
 }
 nav #monthMenu #menuMonth04.active,
 main li .foodMonths span.m04 {
-  background-color: #ccff99;
+  background-color: var(--color-h090);
 }
 nav #monthMenu #menuMonth05.active,
 main li .foodMonths span.m05 {
-  background-color: #99ff99;
+  background-color: var(--color-h120);
 }
 nav #monthMenu #menuMonth06.active,
 main li .foodMonths span.m06 {
-  background-color: #99ffcc;
+  background-color: var(--color-h150);
 }
 nav #monthMenu #menuMonth07.active,
 main li .foodMonths span.m07 {
-  background-color: #99ffff;
+  background-color: var(--color-h180);
 }
 nav #monthMenu #menuMonth08.active,
 main li .foodMonths span.m08 {
-  background-color: #99ccff;
+  background-color: var(--color-h210);
 }
 nav #monthMenu #menuMonth09.active,
 main li .foodMonths span.m09 {
-  background-color: #9999ff;
+  background-color: var(--color-h240);
 }
 nav #monthMenu #menuMonth10.active,
 main li .foodMonths span.m10 {
-  background-color: #cc99ff;
+  background-color: var(--color-h270);
 }
 nav #monthMenu #menuMonth11.active,
 main li .foodMonths span.m11 {
-  background-color: #ff99ff;
+  background-color: var(--color-h300);
 }
 nav #monthMenu #menuMonth12.active,
 main li .foodMonths span.m12 {
-  background-color: #ff99cc;
+  background-color: var(--color-h330);
 }
 body.darkMode nav #monthMenu #menuMonth01.active,
 body.darkMode main li .foodMonths span.m01 {
-  color: #ff9999;
+  color: var(--color-h000);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth02.active,
 body.darkMode main li .foodMonths span.m02 {
-  color: #ffcc99;
+  color: var(--color-h030);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth03.active,
 body.darkMode main li .foodMonths span.m03 {
-  color: #ffff99;
+  color: var(--color-h060);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth04.active,
 body.darkMode main li .foodMonths span.m04 {
-  color: #ccff99;
+  color: var(--color-h090);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth05.active,
 body.darkMode main li .foodMonths span.m05 {
-  color: #99ff99;
+  color: var(--color-h120);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth06.active,
 body.darkMode main li .foodMonths span.m06 {
-  color: #99ffcc;
+  color: var(--color-h150);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth07.active,
 body.darkMode main li .foodMonths span.m07 {
-  color: #99ffff;
+  color: var(--color-h180);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth08.active,
 body.darkMode main li .foodMonths span.m08 {
-  color: #99ccff;
+  color: var(--color-h210);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth09.active,
 body.darkMode main li .foodMonths span.m09 {
-  color: #9999ff;
+  color: var(--color-h240);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth10.active,
 body.darkMode main li .foodMonths span.m10 {
-  color: #cc99ff;
+  color: var(--color-h270);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth11.active,
 body.darkMode main li .foodMonths span.m11 {
-  color: #ff99ff;
+  color: var(--color-h300);
   background-color: transparent;
 }
 body.darkMode nav #monthMenu #menuMonth12.active,
 body.darkMode main li .foodMonths span.m12 {
-  color: #ff99cc;
+  color: var(--color-h330);
   background-color: transparent;
 }
 @media print {
@@ -183,6 +200,6 @@ body.darkMode main li .foodMonths span.m12 {
   body.darkMode main li .foodMonths span.m11,
   body.darkMode nav #monthMenu #menuMonth12.active,
   body.darkMode main li .foodMonths span.m12 {
-    color: #000000;
+    color: var(--color-black);
   }
 }
