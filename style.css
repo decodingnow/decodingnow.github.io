@@ -1,8 +1,10 @@
 /* Global Settings */
 :root {
   --color-black: hsla(0, 0%, 0%, 1);
+  --color-black-transparent: hsla(0, 0%, 0%, 0.8);
   --color-gray75: hsla(0, 0%, 75%, 1);
   --color-white: hsla(0, 0%, 100%, 1);
+  --color-white-transparent: hsla(0, 0%, 100%, 0.8);
   --color-h000: hsla(000, 100%, 80%, 1);
   --color-h030: hsla(030, 100%, 80%, 1);
   --color-h060: hsla(060, 100%, 80%, 1);
@@ -20,6 +22,11 @@
 header {
   display: inline-block;
   cursor: pointer;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white-transparent);
 }
 nav li {
   list-style: none;
@@ -105,9 +112,10 @@ main li .foodMonths span.m12 {
   background-color: var(--color-black);
   color: var(--color-white);
 }
+body.darkMode nav,
 body.darkMode nav #monthMenu li.active,
 body.darkMode main li .foodMonths span {
-  background-color: transparent;
+  background-color: var(--color-black-transparent);
 }
 body.darkMode nav #menuMonth01.active,
 body.darkMode main li .foodMonths span.m01 {
