@@ -213,3 +213,18 @@ body.darkMode main li .foodMonths span.m12 {
     color: var(--color-black);
   }
 }
+/* For mobile */
+@media screen and (max-width: 768px) {
+  main ol {
+    padding: 0;
+  }
+  main li {
+    font-size: 2rem;
+    list-style: decimal inside;
+    border-bottom: 2px dashed var(--color-gray75);
+  }
+  main li .foodMonths {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
