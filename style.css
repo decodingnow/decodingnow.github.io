@@ -171,6 +171,7 @@ body.darkMode main li .foodMonths span.m12 {
     font-size: x-small;
   }
   nav {
+    position: static;
     display: flex;
     justify-content: space-between;
     align-items: center;
