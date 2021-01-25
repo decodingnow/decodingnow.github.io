@@ -48,6 +48,11 @@ main li.year .foodName {
 main li .foodMonths span {
   margin: 0.1rem;
 }
+main li.deadline .foodMonths::after {
+  content: "(이번 달까지)";
+  background-color: var(--color-gray75);
+  margin-left: 0.5rem;
+}
 main .hide {
   display: none;
 }

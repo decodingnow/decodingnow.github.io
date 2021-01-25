@@ -7,6 +7,7 @@ function jsonToArray(data) {
   for (let i = 0; i < data.length; i++) {
     itemList.push(data[i]);
   }
+  deadlineOfFoodMonth();
   return itemList;
 }
 function makeLITag(itemList, orderType) {
@@ -26,6 +27,9 @@ function makeLITag(itemList, orderType) {
     for (let j of itemList[i].foodMonths) {
       selectAll(`#${orderType} li`)[i].classList.add(`m${j}`);
     }
+    for (let j of itemList[i].foodMonthsDeadline) {
+      selectAll(`#${orderType} li`)[i].classList.add(`d${j}`);
+    }
     if (itemList[i].foodMonths.length == 12) {
       selectAll(`#${orderType} li`)[i].classList.add(`year`);
     }
@@ -36,6 +40,9 @@ function filterMonth(menuName) {
     !selectAll(`main li`)[i].classList.contains(`m${menuName}`)
       ? selectAll(`main li`)[i].classList.add("hide")
       : selectAll(`main li`)[i].classList.remove("hide");
+    selectAll(`main li`)[i].classList.contains(`d${menuName}`)
+      ? selectAll(`main li`)[i].classList.add("deadline")
+      : selectAll(`main li`)[i].classList.remove("deadline");
   }
 }
 function filterSort(orderTypeOn) {
@@ -56,6 +63,24 @@ function activeMenuMonthOrTotal(e) {
   e.target.classList.add("active");
   currentMonthMenu = e.target;
 }
+function deadlineOfFoodMonth() {
+  for (let i = 0; i < itemList.length; i++) {
+    let tempFirstMonthOfNextYear = `${
+      12 + parseInt(itemList[i].foodMonths[0], 10)
+    }`;
+    itemList[i].foodMonthsDeadline = [];
+    itemList[i].foodMonths.push(tempFirstMonthOfNextYear);
+    for (let j = 0; j < itemList[i].foodMonths.length - 1; j++) {
+      if (
+        itemList[i].foodMonths[j + 1] !=
+        parseInt(itemList[i].foodMonths[j], 10) + 1
+      ) {
+        itemList[i].foodMonthsDeadline.push(itemList[i].foodMonths[j]);
+      }
+    }
+    itemList[i].foodMonths.pop();
+  }
+}
 function writeHTML(itemList) {
   makeLITag(itemList, "listSortByName");
   select(`#listSortByName`).classList.add("hide");
@@ -74,6 +99,9 @@ function clickMenu(e) {
       case "전체":
         for (let i = 0; i < itemList.length * 2; i++) {
           selectAll(`main li`)[i].classList.remove("hide");
+          selectAll(`main li`)[i].classList.contains(`d${menuName}`)
+            ? selectAll(`main li`)[i].classList.add("deadline")
+            : selectAll(`main li`)[i].classList.remove("deadline");
         }
         activeMenuMonthOrTotal(e);
         break;
