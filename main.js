@@ -18,8 +18,8 @@ function makeLITag(itemList, orderType) {
     }
     const html = `
       <li>
-        <b class="foodName">${itemList[i].foodName}</b>
         <b class="foodMonths">${foodMonthsInnerHtml}</b>
+        <b class="foodName">${itemList[i].foodName}</b>
         <i class="foodHashtags">${itemList[i].foodHashtags}</i>
       </li>
       `;

@@ -18,6 +18,10 @@
   --color-h300: hsla(300, 100%, 80%, 1);
   --color-h330: hsla(330, 100%, 80%, 1);
 }
+ol,
+ul {
+  list-style: none;
+}
 /* Elements */
 header {
   display: inline-block;
@@ -27,6 +31,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: var(--color-white-transparent);
+  text-align: center;
 }
 nav li {
   list-style: none;
@@ -39,19 +44,30 @@ nav li {
 nav #monthMenu li.active::after {
   content: "월";
 }
-main li .foodName {
-  text-decoration: underline;
+main li {
+  padding: 0.1rem;
 }
-main li.year .foodName {
-  text-decoration: none;
-}
-main li .foodMonths span {
-  margin: 0.1rem;
-}
-main li.deadline .foodMonths::after {
+main .deadline .foodMonths::before {
   content: "(이번 달까지)";
   background-color: var(--color-gray75);
-  margin-left: 0.5rem;
+  margin-right: 0.1rem;
+}
+main .foodMonths {
+  display: inline-block;
+  width: 20rem;
+  text-align: right;
+}
+main .foodMonths span {
+  margin: 0.1rem;
+}
+main .foodName {
+  text-decoration: underline;
+}
+main .year .foodName {
+  text-decoration: none;
+}
+main .foodHashtags {
+  display: inline-block;
 }
 main .hide {
   display: none;
@@ -224,12 +240,22 @@ body.darkMode main li .foodMonths span.m12 {
     padding: 0;
   }
   main li {
+    display: list-item;
     font-size: 2rem;
-    list-style: decimal inside;
     border-bottom: 2px dashed var(--color-gray75);
+    padding: 1rem 0;
   }
   main li .foodMonths {
+    width: auto;
     display: flex;
     flex-wrap: wrap;
+  }
+  main .deadline .foodMonths::before {
+    display: none;
+  }
+  main .deadline .foodMonths::after {
+    content: "(이번 달까지)";
+    background-color: var(--color-gray75);
+    margin-left: 0.1rem;
   }
 }
