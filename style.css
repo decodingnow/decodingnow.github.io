@@ -250,6 +250,9 @@ body.darkMode main li .foodMonths span.m12 {
     display: flex;
     flex-wrap: wrap;
   }
+  main li .foodMonths.hide {
+    display: none;
+  }
   main .deadline .foodMonths::before {
     display: none;
   }
