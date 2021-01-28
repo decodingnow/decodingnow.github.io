@@ -46,13 +46,18 @@ nav li {
 nav #monthMenu li.active::after {
   content: "월";
 }
+main .annotation {
+  margin-left: 40px;
+  padding-left: 0.1rem;
+  color: var(--color-gray75);
+}
 main li {
   padding: 0.1rem;
 }
 main .deadline .foodMonths::before {
-  content: "(이번 달까지)";
+  content: "✔";
   color: var(--color-gray75);
-  margin-right: 0.1rem;
+  margin: 0.1rem;
 }
 main .foodMonths {
   display: inline-block;
@@ -253,13 +258,5 @@ body.darkMode main li .foodMonths span.m12 {
   }
   main li .foodMonths.hide {
     display: none;
-  }
-  main .deadline .foodMonths::before {
-    display: none;
-  }
-  main .deadline .foodMonths::after {
-    content: "(이번 달까지)";
-    color: var(--color-gray75);
-    margin: 0.1rem;
   }
 }
