@@ -23,6 +23,9 @@ ul {
   list-style: none;
 }
 /* Elements */
+body {
+  margin: 2% 3%;
+}
 header {
   display: inline-block;
   cursor: pointer;
@@ -31,7 +34,6 @@ nav {
   position: sticky;
   top: 0;
   background-color: var(--color-white-transparent);
-  text-align: center;
 }
 nav li {
   list-style: none;
@@ -54,7 +56,6 @@ main .deadline .foodMonths::before {
 }
 main .foodMonths {
   display: inline-block;
-  width: 20rem;
   text-align: right;
 }
 main .foodMonths span {
