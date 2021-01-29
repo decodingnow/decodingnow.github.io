@@ -46,7 +46,7 @@ nav li {
 nav #monthMenu li.active::after {
   content: "월";
 }
-main .annotation {
+main #annotationDeadline {
   margin-left: 40px;
   padding-left: 0.1rem;
   color: var(--color-gray75);
@@ -54,7 +54,7 @@ main .annotation {
 main li {
   padding: 0.1rem;
 }
-main .deadline .foodMonths::before {
+main .deadline::before {
   content: "✔";
   color: var(--color-gray75);
   margin: 0.1rem;

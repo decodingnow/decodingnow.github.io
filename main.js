@@ -44,6 +44,7 @@ function filterMonth(menuName) {
       ? selectAll(`main li`)[i].classList.add("deadline")
       : selectAll(`main li`)[i].classList.remove("deadline");
   }
+  select(`#annotationDeadline`).classList.remove("hide");
 }
 function filterSort(orderTypeOn) {
   let orderTypeOff;
@@ -99,11 +100,10 @@ function clickMenu(e) {
       case "전체":
         for (let i = 0; i < itemList.length * 2; i++) {
           selectAll(`main li`)[i].classList.remove("hide");
-          selectAll(`main li`)[i].classList.contains(`d${menuName}`)
-            ? selectAll(`main li`)[i].classList.add("deadline")
-            : selectAll(`main li`)[i].classList.remove("deadline");
+          selectAll(`main li`)[i].classList.remove("deadline");
         }
         activeMenuMonthOrTotal(e);
+        select(`#annotationDeadline`).classList.add("hide");
         break;
       case "기간이 짧은 순":
         filterSort("Period");
