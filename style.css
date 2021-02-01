@@ -53,6 +53,7 @@ main #annotationDeadline {
 }
 main li {
   padding: 0.1rem;
+  border-bottom: 1px dashed var(--color-gray75);
 }
 main .deadline::before {
   content: "✔";
