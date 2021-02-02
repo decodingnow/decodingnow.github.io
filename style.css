@@ -51,6 +51,9 @@ main #annotationDeadline {
   padding-left: 0.1rem;
   color: var(--color-gray75);
 }
+main ol {
+  padding: 0 40px;
+}
 main li {
   padding: 0.1rem;
   border-bottom: 1px dashed var(--color-gray75);
