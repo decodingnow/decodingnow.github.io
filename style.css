@@ -59,9 +59,10 @@ main li {
   border-bottom: 1px dashed var(--color-gray75);
 }
 main .deadline::before {
-  content: "✔";
+  content: "✓";
   color: var(--color-gray75);
   margin: 0.1rem;
+  font-weight: bold;
 }
 main .foodMonths {
   display: inline-block;
