@@ -84,9 +84,11 @@ main .hide {
   display: none;
 }
 /* Style Changes */
-header:hover,
-nav li:hover {
-  background-color: var(--color-gray75);
+@media (any-hover: hover) {
+  header:hover,
+  nav li:hover {
+    background-color: var(--color-gray75);
+  }
 }
 nav li.active {
   font-size: x-large;
