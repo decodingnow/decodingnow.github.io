@@ -52,11 +52,12 @@ main #annotationDeadline {
   color: var(--color-gray75);
 }
 main ol {
-  padding: 0 40px;
+  padding: 0;
 }
 main li {
-  padding: 0.1rem;
-  border-bottom: 1px dashed var(--color-gray75);
+  font-size: 2rem;
+  border-bottom: 2px dashed var(--color-gray75);
+  padding: 1rem 0;
 }
 main .deadline::before {
   content: "✓";
@@ -65,8 +66,9 @@ main .deadline::before {
   font-weight: bold;
 }
 main .foodMonths {
-  display: inline-block;
-  text-align: right;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 main .foodMonths span {
   margin: 0.1rem;
@@ -199,6 +201,23 @@ body.darkMode nav #menuMonth12.active,
 body.darkMode main li .foodMonths span.m12 {
   color: var(--color-h330);
 }
+/* For desktop */
+@media screen and (min-width: 768px) {
+  main ol {
+    padding: 0 40px;
+  }
+  main li {
+    font-size: 1rem;
+    padding: 0.1rem;
+    border-bottom: 1px dashed var(--color-gray75);
+  }
+  main li .foodMonths {
+    display: inline-block;
+  }
+  main li .foodMonths.hide {
+    display: none;
+  }
+}
 /* Print Mode */
 @media print {
   body {
@@ -218,6 +237,20 @@ body.darkMode main li .foodMonths span.m12 {
   }
   nav #optionMenu li.active {
     font-size: inherit;
+  }
+  main ol {
+    padding: 0 40px;
+  }
+  main li {
+    font-size: x-small;
+    padding: 0.1rem;
+    border-bottom: 1px dashed var(--color-gray75);
+  }
+  main li .foodMonths {
+    display: inline-block;
+  }
+  main li .foodMonths.hide {
+    display: none;
   }
   .darkMode,
   body.darkMode nav #monthMenu #menuMonth01.active,
@@ -245,25 +278,5 @@ body.darkMode main li .foodMonths span.m12 {
   body.darkMode nav #monthMenu #menuMonth12.active,
   body.darkMode main li .foodMonths span.m12 {
     color: var(--color-black);
-  }
-}
-/* For mobile */
-@media screen and (max-width: 768px) {
-  main ol {
-    padding: 0;
-  }
-  main li {
-    display: list-item;
-    font-size: 2rem;
-    border-bottom: 2px dashed var(--color-gray75);
-    padding: 1rem 0;
-  }
-  main li .foodMonths {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  main li .foodMonths.hide {
-    display: none;
   }
 }
