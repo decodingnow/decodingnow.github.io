@@ -201,6 +201,23 @@ body.darkMode nav #menuMonth12.active,
 body.darkMode main li .foodMonths span.m12 {
   color: var(--color-h330);
 }
+/* For tablet */
+@media screen and (min-width: 600px) {
+  main ol {
+    padding: 0 20px;
+  }
+  main li {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.1rem;
+    border-bottom-width: 1.5px;
+  }
+  main li .foodMonths {
+    display: inline-block;
+  }
+  main li .foodMonths.hide {
+    display: none;
+  }
+}
 /* For desktop */
 @media screen and (min-width: 768px) {
   main ol {
@@ -209,13 +226,7 @@ body.darkMode main li .foodMonths span.m12 {
   main li {
     font-size: 1rem;
     padding: 0.1rem;
-    border-bottom: 1px dashed var(--color-gray75);
-  }
-  main li .foodMonths {
-    display: inline-block;
-  }
-  main li .foodMonths.hide {
-    display: none;
+    border-bottom-width: 1px;
   }
 }
 /* Print Mode */
