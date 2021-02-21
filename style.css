@@ -34,6 +34,9 @@ nav {
   position: sticky;
   top: 0;
   background-color: var(--color-white-transparent);
+  border: 2px dashed var(--color-gray75);
+  border-radius: 0.5rem;
+  padding: 1rem 0;
 }
 nav li {
   list-style: none;
@@ -203,13 +206,16 @@ body.darkMode main li .foodMonths span.m12 {
 }
 /* For tablet */
 @media screen and (min-width: 600px) {
+  nav,
+  main li {
+    border-width: 1.5px;
+    padding: 0.5rem 0.1rem;
+  }
   main ol {
     padding: 0 20px;
   }
   main li {
     font-size: 1.5rem;
-    padding: 0.5rem 0.1rem;
-    border-bottom-width: 1.5px;
   }
   main li .foodMonths {
     display: inline-block;
@@ -220,13 +226,16 @@ body.darkMode main li .foodMonths span.m12 {
 }
 /* For desktop */
 @media screen and (min-width: 768px) {
+  nav,
+  main li {
+    border-width: 1px;
+    padding: 0.1rem;
+  }
   main ol {
     padding: 0 40px;
   }
   main li {
     font-size: 1rem;
-    padding: 0.1rem;
-    border-bottom-width: 1px;
   }
 }
 /* Print Mode */
