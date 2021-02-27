@@ -127,6 +127,22 @@ function clickMenu(e) {
       case "인쇄":
         window.print();
         break;
+      case "▲":
+        e.target.innerHTML = "▼";
+        select(`nav`).classList.add("miniNav");
+        for (let i = 0; i < selectAll(`nav li`).length; i++) {
+          if (!selectAll(`nav li`)[i].classList.contains("active")) {
+            selectAll(`nav li`)[i].classList.add("hide");
+          }
+        }
+        break;
+      case "▼":
+        e.target.innerHTML = "▲";
+        select(`nav`).classList.remove("miniNav");
+        for (let i = 0; i < selectAll(`nav li`).length; i++) {
+          selectAll(`nav li`)[i].classList.remove("hide");
+        }
+        break;
       case menuName:
         filterMonth(menuName);
         activeMenuMonthOrTotal(e);

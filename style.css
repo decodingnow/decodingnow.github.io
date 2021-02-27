@@ -46,6 +46,11 @@ nav li {
   transition-duration: 300ms;
   opacity: 0.5;
 }
+#navbarToggler {
+  display: block;
+  text-align: right;
+  color: var(--color-black-transparent);
+}
 nav #monthMenu li.active::after {
   content: "월";
 }
@@ -85,6 +90,7 @@ main .year .foodName {
 main .foodHashtags {
   display: inline-block;
 }
+nav .hide,
 main .hide {
   display: none;
 }
@@ -98,6 +104,14 @@ main .hide {
 nav li.active {
   font-size: x-large;
   opacity: 1;
+}
+nav.miniNav {
+  padding: 1rem 0 1rem 1rem;
+}
+nav.miniNav #monthMenu,
+nav.miniNav #optionMenu {
+  display: inline;
+  padding: 0;
 }
 nav #menuMonth01.active,
 main li .foodMonths span.m01 {
@@ -211,6 +225,9 @@ body.darkMode main li .foodMonths span.m12 {
     border-width: 1.5px;
     padding: 0.5rem 0.1rem;
   }
+  nav.miniNav {
+    padding: 1rem 0 1rem 2rem;
+  }
   main ol {
     padding: 0 20px;
   }
@@ -230,6 +247,9 @@ body.darkMode main li .foodMonths span.m12 {
   main li {
     border-width: 1px;
     padding: 0.1rem;
+  }
+  nav.miniNav {
+    padding: 1rem 0 1rem 3rem;
   }
   main ol {
     padding: 0 40px;
