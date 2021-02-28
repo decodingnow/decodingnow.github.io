@@ -91,6 +91,7 @@ function writeHTML(itemList) {
   select(`#menuSortByPeriod`).classList.add("active");
   select(`#menuFoodMonths`).classList.add("active");
   select(`#menuFoodHashtags`).classList.add("active");
+  select(`#menuNavbarToggler`).classList.add("active");
   filterMonth(currentMonthMenu.innerHTML);
 }
 function clickMenu(e) {
@@ -127,8 +128,8 @@ function clickMenu(e) {
       case "인쇄":
         window.print();
         break;
-      case "▲":
-        e.target.innerHTML = "▼";
+      case "↑":
+        e.target.innerHTML = "↓";
         select(`nav`).classList.add("miniNav");
         for (let i = 0; i < selectAll(`nav li`).length; i++) {
           if (!selectAll(`nav li`)[i].classList.contains("active")) {
@@ -136,8 +137,8 @@ function clickMenu(e) {
           }
         }
         break;
-      case "▼":
-        e.target.innerHTML = "▲";
+      case "↓":
+        e.target.innerHTML = "↑";
         select(`nav`).classList.remove("miniNav");
         for (let i = 0; i < selectAll(`nav li`).length; i++) {
           selectAll(`nav li`)[i].classList.remove("hide");
